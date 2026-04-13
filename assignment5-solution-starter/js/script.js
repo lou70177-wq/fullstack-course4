@@ -83,8 +83,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 showLoading("#main-content");
 $ajaxUtils.sendGetRequest(
   allCategoriesUrl,
-  [...], // ***** <---- TODO: STEP 1: Substitute [...] ******
-  true); // Explicitly setting the flag to get JSON from server processed into an object literal
+  buildAndShowHomeHTML, // Передаем саму функцию как аргумент
+  true);
 });
 // *** finish **
 
@@ -352,5 +352,9 @@ function insertItemPortionName(html,
 
 
 global.$dc = dc;
-
+// Функция для выбора случайного элемента из массива категорий
+function chooseRandomCategory (categories) {
+  var randomArrayIndex = Math.floor(Math.random() * categories.length);
+  return categories[randomArrayIndex];
+}
 })(window);
