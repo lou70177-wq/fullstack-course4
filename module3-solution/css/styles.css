@@ -1,0 +1,30 @@
+#header-nav {
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.content-box {
+  background-color: #999;
+  padding: 15px;
+  margin-bottom: 20px;
+  min-height: 1000px; /* Это создаст скролл, как просят в задании */
+}
+
+h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#nav-list {
+  margin: 0;
+}
+
+#nav-list li a {
+  border-bottom: 1px solid #ddd;
+}
