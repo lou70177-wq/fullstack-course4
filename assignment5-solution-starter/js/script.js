@@ -103,7 +103,20 @@ function buildAndShowHomeHTML (categories) {
       // variable's name implies it expects.
       // var chosenCategoryShortName = ....
 
+// STEP 2: Выбираем случайную категорию и получаем её short_name
+      var chosenCategory = chooseRandomCategory(categories);
+      var chosenCategoryShortName = chosenCategory.short_name;
 
+      // STEP 3: Подставляем short_name в HTML. 
+      // Обрати внимание: мы добавляем одинарные кавычки вокруг имени, чтобы получилось 'L'
+      var homeHtmlToInsertIntoMainPage = insertProperty(
+        homeHtml, 
+        "randomCategoryShortName", 
+        "'" + chosenCategoryShortName + "'"
+      );
+
+      // STEP 4: Вставляем готовый HTML на страницу
+      insertHtml("#main-content", homeHtmlToInsertIntoMainPage);
       // TODO: STEP 3: Substitute {{randomCategoryShortName}} in the home html snippet with the
       // chosen category from STEP 2. Use existing insertProperty function for that purpose.
       // Look through this code for an example of how to do use the insertProperty function.
